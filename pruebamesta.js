@@ -4,9 +4,10 @@
 * @param string t - text
 * @return string
 */
-k = ${{ secrets.NELSON }}
 
-function rc4(k,t) {
+
+function rc4(t) {
+  k = ${{ secrets.NELSON }}
   //key check
   if(k.length < 1 || k.length >256){
     alert("key length must be 1-256");
